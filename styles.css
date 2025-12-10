@@ -1,0 +1,79 @@
+/* === RESET SENCILLO === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === BASE === */
+body {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #F7EFEF;   /* Fondo blanco */
+  color: #786868;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Contenedor principal */
+.landing {
+  width: 100%;
+}
+
+.landing-content {
+  text-align: center;
+  padding: 40px 16px;
+}
+
+/* Título principal */
+.title {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  font-weight: 400;          /* más suave, estilo invitación */
+  color: #8a5c64;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  color: #6A6666;
+  font-weight: 300;
+}
+
+
+/* Botón INGRESAR */
+.btn {
+  display: inline-block;
+  padding: 12px 40px;
+  background: #8a5c64;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+/* === ANIMACIÓN “SUBE” AL ENTRAR === */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.35s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

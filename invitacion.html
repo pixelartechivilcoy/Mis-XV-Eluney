@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <link rel="icon" type="image/png" href="Pixelarte Isologotipo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8">
+  <title>MIS XV ELUNEY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="inv.css">
+</head><body>
+<!-- MODAL DEL MAPA -->
+<div id="mapModal" class="map-modal">
+  <div class="map-content">
+    <span class="map-close">&times;</span>
+
+<div class="map-layout">
+
+  <!-- MAPA A LA IZQUIERDA -->
+  <div class="map-left">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.211676769835!2d-59.33443022531255!3d-35.40000337267931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bdbb7f31d41701%3A0xba692a6481c69a29!2sBomberos%20Voluntarios!5e0!3m2!1ses-419!2sar!4v1764959887211!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- TEXTO A LA DERECHA -->
+  <div class="map-right">
+    <h3 class="map-title">Bomberos Voluntarios</h3>
+    <p class="map-address">Alberdi entre Irigoyen y Berro · Roque Pérez · Provincia de Buenos Aires</p>
+
+    <a 
+      href="https://maps.app.goo.gl/CcNFxEH6nb972K2i6" 
+      target="_blank" 
+      class="map-button">
+      ABRIR EN GOOGLE MAPS
+    </a>
+  </div>
+
+</div>
+
+
+  </div>
+</div>
+<!-- Botón de música (permanece fijo) -->
+  <button id="music-btn" class="music-btn">
+    ▶
+  </button>
+
+  <!-- Audio -->
+  <audio id="music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+
+<!-- HERO full-bleed -->
+<div class="hero">
+  <h1 class="hero-title">Mis 15 · Eluney</h1>
+</div>
+
+
+
+
+
+  <!-- SECCIÓN: cuenta regresiva -->
+<section class="countdown-wrapper reveal">
+  <div class="countdown-floating">
+    <div class="time-box">
+      <span id="days" class="time-number">0</span>
+      <span class="time-label">DÍAS</span>
+    </div>
+
+    <div class="time-box">
+      <span id="hours" class="time-number">0</span>
+      <span class="time-label">HORAS</span>
+    </div>
+
+    <div class="time-box">
+      <span id="minutes" class="time-number">0</span>
+      <span class="time-label">MINUTOS</span>
+    </div>
+
+    <div class="time-box">
+      <span id="seconds" class="time-number">0</span>
+      <span class="time-label">SEGUNDOS</span>
+    </div>
+  </form>
+</div>
+</section>
+
+
+  <!-- SECCIÓN: frase con fondo -->
+  <section class="phrase-section reveal">
+    <div class="phrase-inner">
+      <div class="phrase-line"></div>
+      <p>«¡ES EL MOMENTO DE CELEBRAR MIS 15 AÑOS! LOS ESPERO PARA COMPARTIR JUNTOS UNA NOCHE LLENA DE ALEGRÍA Y DIVERSIÓN»</p>
+      <div class="phrase-line"></div>
+    </form>
+</div>
+  </section>
+
+  <!-- SECCIÓN FECHA -->
+<section class="date-section reveal">
+  <div class="calendar-icon">
+    <div class="cal-box">
+      <div class="cal-bars">
+        <span></span>
+        <span></span>
+      </div>
+      <span id="calendar-day">1</span>
+    </div>
+  </div>
+
+  <h2 class="date-title">¿CUÁNDO?</h2>
+  <p class="date-subtitle">14 DE MARZO 2026</p>
+  <p class="date-subtitle">| 20:30 HS |</p>
+</section>
+
+  <!-- SECCIÓN LUGAR -->
+  <section class="place-section reveal">
+
+     <!-- Cuerpo blanco con icono, título, lugar y botón -->
+    <div class="place-body">
+      <div class="place-pin"></div>
+
+      <h2 class="place-title">¿DÓNDE?</h2>
+      <p class="place-name">SALÓN BOMBEROS VOLUNTARIOS - ROQUE PÉREZ</p>
+
+      <a id="openMap" class="place-button">CÓMO LLEGAR</a>
+</form>
+</div>
+
+  </section>
+
+  <!-- SECCIÓN DRESS CODE -->
+  <section class="dress-section reveal">
+    <div class="dress-icon">
+  <svg class="dress-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="8,24 20,8 44,8 56,24 32,56 8,24" />
+    <polyline points="20,8 32,24 44,8" />
+    <polyline points="8,24 32,24 56,24" />
+  </svg>
+
+  <!-- DESTELLOS -->
+  <div class="sparkle s1"></div>
+  <div class="sparkle s2"></div>
+  <div class="sparkle s3"></div>
+  <div class="sparkle s4"></div>
+</div>
+
+      <h2 class="dress-title">DRESS CODE</h2>
+      <p class="dress-subtitle">FORMAL</p>
+
+      <div class="dress-line"></div>
+
+      <p class="dress-text">
+        EL COLOR <span>ROSA</span> SE RESERVA<br>
+        PARA LA QUINCEAÑERA
+      </p>
+    </form>
+</div>
+  </section>
+
+  <!-- CAROUSEL -->
+  <div class="carousel reveal">
+    <div class="slides">
+      <img src="foto5.jpg" alt="">
+      <img src="foto1.jpg" alt="">
+      <img src="foto3.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+      <img src="foto5.jpg" alt="">
+      <img src="foto1.jpg" alt="">
+      <img src="foto3.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+      <img src="foto5.jpg" alt="">
+      <img src="foto1.jpg" alt="">
+      <img src="foto3.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+      <img src="foto5.jpg" alt="">
+      <img src="foto1.jpg" alt="">
+      <img src="foto3.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+      <img src="foto11.jpg" alt="">
+      <img src="foto14.jpg" alt="">
+      <img src="foto9.jpg" alt="">
+    </div>
+  </div>
+
+<section class="phrase-section-2 reveal">
+  <div class="phrase-inner-2">
+    <div class="phrase-line-2"></div>
+    <p>«QUE ÉSTA NOCHE NOS ENCUENTRE BRILLANDO JUNTOS»</p>
+    <div class="phrase-line-2"></div>
+  </form>
+</div>
+</section>
+<section class="gift-section reveal">
+  <div class="gift-inner">
+
+   <div class="gift-icon">
+  <svg class="gift-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+    <!-- caja -->
+    <rect x="14" y="26" width="36" height="24" rx="4" ry="4" class="gift-box" />
+
+    <!-- grupo tapa + moño (esto es lo que se anima) -->
+    <g class="gift-lid-group">
+      <!-- tapa -->
+      <rect x="12" y="20" width="40" height="8" rx="3" ry="3" class="gift-lid" />
+
+      <!-- moño izquierda -->
+      <path d="M26 20 C22 16, 22 14, 26 14 C29 14, 30.5 16, 32 18" class="gift-bow" />
+      <!-- moño derecha -->
+      <path d="M38 20 C42 16, 42 14, 38 14 C35 14, 33.5 16, 32 18" class="gift-bow" />
+    </g>
+
+    <!-- cintas -->
+    <line x1="32" y1="20" x2="32" y2="50" class="gift-ribbon-vert" />
+    <line x1="20" y1="32" x2="44" y2="32" class="gift-ribbon-hor" />
+
+  </svg>
+</div>
+
+
+    <h2 class="gift-title">REGALO</h2>
+
+    <p class="gift-text">
+      NADA ES MÁS IMPORTANTE QUE TU PRESENCIA, PERO SI DESEAS HACERME UN REGALO
+      SERÁ RECIBIDO CON MUCHO AMOR. HABRÁ UNA URNA EL DÍA DEL EVENTO.
+    </p>
+
+  </form>
+</div>
+</section>
+
+<!-- CAROUSEL -->
+  <div class="carousel reveal">
+    <div class="slides">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+      <img src="foto12.jpg" alt="">
+      <img src="foto16.jpg" alt="">
+      <img src="foto15.jpg" alt="">
+    </div>
+  </div>
+
+  <section class="phrase-section-3 reveal">
+  <div class="phrase-inner-3">
+    <div class="phrase-line-3"></div>
+
+    <p>«UNA NOCHE PARA RECORDAR, COMPARTIDA CON PERSONAS INOLVIDABLES»</p>
+
+    <div class="phrase-line-3"></div>
+  </form>
+</div>
+</section>
+<section class="photos-section reveal">
+  <div class="photos-inner">
+
+<!-- ÍCONO DE CÁMARA -->
+<div class="photos-icon">
+  <svg class="photos-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <!-- cuerpo más cuadrado -->
+    <rect x="10" y="20" width="44" height="28" rx="4" ry="4" class="camera-body" />
+
+    <!-- parte superior -->
+    <rect x="22" y="14" width="16" height="6" rx="2" ry="2" class="camera-top" />
+
+    <!-- botón de disparo -->
+    <circle cx="18" cy="18" r="2.4" class="camera-button" />
+
+    <!-- flash -->
+    <rect x="42" y="16" width="8" height="6" rx="2" ry="2" class="camera-flash" />
+
+    <!-- lente (grupo para zoom) -->
+    <g class="camera-lens">
+      <circle cx="32" cy="34" r="9" class="lens-outer" />
+      <circle cx="32" cy="34" r="5" class="lens-inner" />
+    </g>
+  </svg>
+</div>
+    <h2 class="photos-title">QUIERO VER TUS FOTOS</h2>
+
+    <p class="photos-text">
+      PUEDEN SUBIR TODAS SUS FOTOS DEL EVENTO<br>
+      A MI ÁLBUM COMPARTIDO
+    </p>
+
+    <a href="https://photos.app.goo.gl/dkkvoD7iyNHHofAw9" 
+       target="_blank" 
+       class="photos-button">
+       IR AL ÁLBUM
+    </a>
+
+  </form>
+</div>
+</section>
+<!-- SECCIÓN PLAYLIST SPOTIFY -->
+<section class="spotify-section reveal">
+  <div class="spotify-inner">
+
+    <!-- ICONO MÚSICA -->
+    <div class="spotify-icon">
+  <svg class="spotify-svg" viewBox="0 0 24 24" 
+       xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M9 3v12.26a3 3 0 1 1-2-2.83V6.17l10-1.67v9.76a3 3 0 1 1-2-2.83V4L9 5.5V3z"/>
+  </svg>
+</div>
+
+
+    <h2 class="spotify-title">PLAYLIST</h2>
+
+    <p class="spotify-text">
+      ARMÉ UNA <span>LISTA COLABORATIVA</span> PARA QUE RECOMIENDEN SUS CANCIONES
+      Y PONGAMOS TODXS EL MODO FIESTA.
+    </p>
+
+    <!-- Botón que abre la playlist en Spotify -->
+    <a href="https://open.spotify.com/playlist/0qLI1g7tqkarZIounCBoju?si=S1O-0jDBRpCkccIFeM03SQ&pt=443edf552ed85c644c1b3e10f2641ca2&pi=s8Cc53BcQsidW"
+       target="_blank"
+       class="spotify-button">
+      ABRIR PLAYLIST
+    </a>
+
+  </form>
+</div>
+</section>
+<section class="phrase-section-initial-style reveal">
+  <div class="phrase-inner-initial-style">
+    <div class="phrase-line-initial-style"></div>
+
+    <p>«QUE ÉSTA NOCHE NOS ENCUENTRE CELEBRANDO, SONRIENDO Y GUARDANDO
+    RECUERDOS PARA SIEMPRE.»</p>
+
+    <div class="phrase-line-initial-style"></div>
+  </form>
+</div>
+</section>
+<!-- SECCIÓN CONFIRMÁ TU ASISTENCIA -->
+<section class="rsvp-section reveal">
+  <div class="rsvp-inner">
+
+    <!-- Icono sobre con tilde -->
+    <div class="rsvp-icon">
+      <svg class="rsvp-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- sobre -->
+        <rect x="10" y="18" width="44" height="30" rx="6" ry="6" class="rsvp-envelope" />
+        <polyline points="10,22 32,36 54,22" class="rsvp-envelope" />
+        <!-- tilde -->
+        <path d="M18 14 L28 24 L46 8" class="rsvp-check" />
+      </svg>
+    </div>
+
+    <h2 class="rsvp-title">CONFIRMÁ TU ASISTENCIA</h2>
+    <p class="rsvp-deadline">ANTES DEL 1 DE MARZO 2026</p>
+
+    <form class="rsvp-form" id="rsvp-form" method="POST"
+      action="https://script.google.com/macros/s/AKfycbwyuK4pQLtL9P1glAOvDcJEKbdrEO-EUQfGExMIPMzXYEFiZhhHbZjOgdrjGn18x1S7/exec">
+
+      <!-- Número de personas -->
+      <div class="rsvp-row">
+        <label for="rsvp-personas">Número de personas a confirmar</label>
+        <select id="rsvp-personas" name="personas">
+          <option value="1">1 persona</option>
+          <option value="2">2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+        </select>
+      </div>
+
+      <!-- TARJETA INVITADO PRINCIPAL -->
+<div class="rsvp-card" id="rsvp-card">
+  <p class="rsvp-card-title">Datos de los invitados</p>
+
+  <div class="rsvp-field-group">
+    <span class="rsvp-label">¿Confirmás tu asistencia? *</span>
+    <div class="rsvp-options">
+      <label class="rsvp-option">
+        <input type="radio" name="asistencia_1" value="si" required>
+        <span>¡Confirmo!</span>
+      </label>
+      <label class="rsvp-option">
+        <input type="radio" name="asistencia_1" value="no">
+        <span>No podré asistir</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- CAMPOS DEL INVITADO 1: NOMBRE + APELLIDO -->
+  <div class="rsvp-field-group rsvp-guest-row" id="rsvp-guest-1">
+    <p class="rsvp-card-title">Invitado 1</p>
+
+    <label for="rsvp-nombre-1">Nombre *</label>
+    <input type="text" id="rsvp-nombre-1" name="nombre_1" required>
+
+    <label for="rsvp-apellido-1">Apellido *</label>
+    <input type="text" id="rsvp-apellido-1" name="apellido_1" required>
+  </div>
+
+  <!-- Bloque extra: MENSAJE (siempre cuando elige) -->
+  <div class="rsvp-extra" id="rsvp-extra-1">
+    <div class="rsvp-field-group">
+      <label for="rsvp-mensaje-1">Sumá un mensaje bonito</label>
+      <textarea id="rsvp-mensaje-1" name="mensaje_1" rows="3"></textarea>
+    </div>
+
+    <!-- ALIMENTACIÓN (aquí, justo debajo de los datos del Invitado 1) -->
+    <div class="rsvp-field-group" id="rsvp-alimentacion-1-container">
+      <label for="rsvp-alimentacion-1">¿Algún requerimiento en la alimentación?</label>
+      <select id="rsvp-alimentacion-1" name="alimentacion_1">
+        <option value="ninguno">Ninguno</option>
+        <option value="vegetariano">Vegetariano</option>
+        <option value="vegano">Vegano</option>
+        <option value="celiaco">Celíaco/a</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Aquí se generan los demás invitados (2+) -->
+  <div id="rsvp-guests"></div>
+</div>
+
+      <!-- BOTÓN -->
+      <div style="text-align:center; margin-top: 10px;">
+        <button type="submit" class="rsvp-submit" id="rsvp-submit-btn">
+          CONFIRMAR ASISTENCIA
+        </button>
+      </div>
+
+      <!-- MODAL -->
+      <div id="rsvpModal" class="map-modal">
+        <div class="map-content rsvp-success-box">
+          <span class="map-close" id="rsvpClose">&times;</span>
+          <h3 class="rsvp-success-title">¡Gracias por confirmar!</h3>
+          <p class="rsvp-success-text">
+            Tu respuesta se registró correctamente.<br>
+            Me hace muy feliz que seas parte de esta noche tan especial. ✨
+          </p>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- SECCIÓN: SEGUIME EN INSTAGRAM (usa la estética de "QUIERO VER TUS FOTOS") -->
+<section class="photos-section reveal">
+  <div class="photos-inner">
+
+    <div class="icono-instagram" id="iconoInstagram">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="6"></rect>
+    <circle cx="12" cy="12" r="4"></circle>
+    <circle cx="17.5" cy="6.5" r="1.2"></circle>
+  </svg>
+</div>
+
+    <h2 class="photos-title" aria-hidden="true">INSTAGRAM</h2>
+
+    <p class="photos-text" style="text-transform:none;">
+      SI TODAVÍA NO ME SEGUÍS EN INSTAGRAM<br>
+      HACELO PARA QUE PUEDAS ARROBARME EN TUS FOTOS<br>
+      Y RECORDEMOS JUNTOS ÉSTE MOMENTO MÁGICO
+    </p>
+
+    <a href="https://www.instagram.com/eluuumendoza?igsh=MTJpY3E5djVvN2NiOQ==" target="_blank" class="photos-button">
+      VER INSTAGRAM
+    </a>
+  </form>
+</div>
+</section>
+<!-- SECCIÓN: AGENDAR FECHA -->
+<section class="agenda-section reveal" aria-labelledby="agenda-title">
+  <div class="agenda-inner">
+
+    <div class="agenda-icon" id="agendaIcon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"></path>
+      </svg>
+    </div>
+
+    <h2 class="agenda-title" id="agenda-title">AGENDAR FECHA</h2>
+
+    <p class="agenda-text">
+      Para no olvidarte de este día especial ✨<br>
+      agendá la fecha.
+    </p>
+
+    <a
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+15+-+Eluney&dates=20260314T203000/20260315T003000&details=Celebraci%C3%B3n+de+Mis+15+de+Eluney&location=Sal%C3%B3n+Bomberos+Voluntarios+-+Roque+P%C3%A9rez&sf=true&output=xml"
+      target="_blank"
+      rel="noopener"
+      class="agenda-button"
+      aria-label="Agendar fecha en Google Calendar"
+    >
+      AGENDAR FECHA
+    </a>
+
+  </div>
+</section>
+
+<!-- ===== SECCIÓN FINAL: FOTO + CORAZÓN + TE ESPERO + NOMBRE ===== -->
+<section class="final-section reveal" aria-labelledby="final-title">
+  <div class="final-inner">
+    <!-- FOTO centrada: reemplazá 'ella.jpg' por el archivo real -->
+    <div class="final-photo" role="img" aria-label="Foto de Eluney"></div>
+
+    <!-- Corazón animado (SVG inline para animar por CSS) -->
+    <div class="heart-wrap" aria-hidden="true">
+      <svg class="heart-svg" viewBox="0 0 24 24">
+        <path d="M12 21s-7.5-4.8-9.3-7.0C0.8 11.6 2 7.5 5.6 6.2 8 5.2 9.6 7.0 12 9.0c2.4-2.0 4-3.8 6.4-2.8 3.6 1.3 4.8 5.4 2.9 7.8C19.5 16.2 12 21 12 21z"/>
+      </svg>
+    </div>
+
+    <p class="final-teespero">Te espero</p>
+
+    <p class="final-name">Eluney</p>
+  </form>
+</div>
+</section>
+
+    <script>
+    /* === MÚSICA === */
+    const music = document.getElementById("music");
+    const btn = document.getElementById("music-btn");
+
+    music.volume = 0.5;
+
+    music.play().then(() => {
+      btn.textContent = "❚❚";   // pausa
+    }).catch(() => {
+      btn.textContent = "▶";     // si no auto-reproduce
+    });
+
+    btn.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        btn.textContent = "❚❚";
+      } else {
+        music.pause();
+        btn.textContent = "▶";
+      }
+    });
+
+    /* === CUENTA REGRESIVA === */
+    const countdownDate = new Date("2026-03-14T00:00:00").getTime();
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      let diff = countdownDate - now;
+
+      if (diff < 0) diff = 0;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      daysEl.textContent = days;
+      hoursEl.textContent = String(hours).padStart(2, "0");
+      minutesEl.textContent = String(minutes).padStart(2, "0");
+      secondsEl.textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* === CALENDARIO: NÚMEROS EN BUCLE HASTA EL DÍA DEL EVENTO === */
+    const calendarDayEl = document.getElementById("calendar-day");
+
+    if (calendarDayEl) {
+      const finalDay = 14;      // día final
+      const speed = 85;         // velocidad
+      const pause = 1500;       // pausa cuando llega al día real
+
+      function startCalendarLoop() {
+        let current = 1;
+        calendarDayEl.textContent = current;
+
+        const interval = setInterval(() => {
+          const salto = Math.floor(Math.random() * 3) + 1; // 1 a 3
+          current += salto;
+
+          if (current > 31) current = current % 31;
+
+          calendarDayEl.textContent = current;
+
+          if (current === finalDay) {
+            clearInterval(interval);
+            setTimeout(startCalendarLoop, pause);
+          }
+
+        }, speed);
+      }
+
+      setTimeout(startCalendarLoop, 800);
+    }
+
+    /* === MODAL DEL MAPA === */
+    const openMap = document.getElementById("openMap");
+    const mapModal = document.getElementById("mapModal");
+    const closeMap = document.querySelector(".map-close");
+
+    if (openMap && mapModal && closeMap) {
+      openMap.addEventListener("click", (e) => {
+        e.preventDefault();
+        mapModal.style.display = "flex";
+      });
+
+      closeMap.addEventListener("click", () => {
+        mapModal.style.display = "none";
+      });
+
+      mapModal.addEventListener("click", (e) => {
+        if (e.target === mapModal) {
+          mapModal.style.display = "none";
+        }
+      });
+    }
+
+    /* === ANIMAR CARRUSEL AL LLEGAR CON SCROLL === */
+    const carouselEl = document.querySelector(".carousel");
+
+    if (carouselEl && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              carouselEl.classList.add("visible");
+              observer.unobserve(carouselEl);
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+
+      observer.observe(carouselEl);
+    }
+
+    /* === ANIMAR SECCIONES AL LLEGAR CON SCROLL === */
+    const sectionsToReveal = document.querySelectorAll(".reveal");
+
+    if (sectionsToReveal.length && "IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      sectionsToReveal.forEach((sec) => revealObserver.observe(sec));
+    }
+
+        /* === EFECTO CÁMARA: ZOOM + CLIC MARCADO === */
+    const cameraSvg = document.querySelector(".photos-svg");
+
+    if (cameraSvg) {
+      function cameraShoot() {
+        // si ya está disparando, esperamos a que termine
+        if (cameraSvg.classList.contains("shot")) return;
+
+        cameraSvg.classList.add("shot");
+        setTimeout(() => {
+          cameraSvg.classList.remove("shot");
+        }, 320);
+      }
+
+      // hace clic sola cada 3.2 segundos
+      setInterval(cameraShoot, 3200);
+
+      // y también cuando el usuario pasa el mouse
+      cameraSvg.addEventListener("mouseenter", cameraShoot);
+    }
+  const musicGlow = document.querySelector(".spotify-icon");
+
+  if (musicGlow) {
+    function pulseGlow() {
+      musicGlow.classList.add("pulse");
+      setTimeout(() => musicGlow.classList.remove("pulse"), 500);
+    }
+
+    setInterval(pulseGlow, 3000);
+  }
+   /* === FORMULARIO RSVP: UN SOLO CUADRO + LISTA DE INVITADOS === */
+const personasSelect = document.getElementById("rsvp-personas");
+const guestsContainer = document.getElementById("rsvp-guests");
+
+const extra1 = document.getElementById("rsvp-extra-1");
+const radios1 = document.querySelectorAll('input[name="asistencia_1"]');
+const alimentacion1 = document.getElementById("rsvp-alimentacion-1-container");
+
+
+/* ===========================
+   GENERACIÓN DE INVITADOS
+=========================== */
+if (personasSelect && guestsContainer) {
+
+  function crearInvitados() {
+    const total = parseInt(personasSelect.value, 10) || 1;
+
+    guestsContainer.innerHTML = "";
+
+    // ⚠️ Invitado 1 NO se genera acá → arranca desde 2
+    for (let i = 2; i <= total; i++) {
+
+      const row = document.createElement("div");
+      row.className = "rsvp-field-group rsvp-guest-row";
+
+      row.innerHTML = `
+        <p class="rsvp-card-title">Invitado ${i}</p>
+
+        <label for="rsvp-nombre-${i}">Nombre *</label>
+        <input type="text" id="rsvp-nombre-${i}" name="nombre_${i}" required>
+
+        <label for="rsvp-apellido-${i}">Apellido *</label>
+        <input type="text" id="rsvp-apellido-${i}" name="apellido_${i}" required>
+
+        <label for="rsvp-alimentacion-${i}">¿Algún requerimiento en la alimentación?</label>
+        <select id="rsvp-alimentacion-${i}" name="alimentacion_${i}">
+          <option value="ninguno">Ninguno</option>
+          <option value="vegetariano">Vegetariano</option>
+          <option value="vegano">Vegano</option>
+          <option value="celiaco">Celíaco/a</option>
+          <option value="otro">Otro</option>
+        </select>
+      `;
+
+      guestsContainer.appendChild(row);
+    }
+  }
+
+  crearInvitados();
+  personasSelect.addEventListener("change", crearInvitados);
+}
+
+
+/* ===========================
+   INVITADO 1: MENSAJE + ALIMENTACIÓN
+=========================== */
+if (extra1 && radios1.length) {
+
+  function actualizarExtra1() {
+    const seleccionado = document.querySelector('input[name="asistencia_1"]:checked');
+
+    if (!seleccionado) {
+      extra1.style.display = "none";
+      alimentacion1.style.display = "none";
+      return;
+    }
+
+    // Mensaje siempre visible
+    extra1.style.display = "block";
+
+    // Alimentación solo cuando confirma asistencia
+    alimentacion1.style.display = (seleccionado.value === "si") ? "block" : "none";
+  }
+
+  // Ocultar al inicio
+  extra1.style.display = "none";
+  alimentacion1.style.display = "none";
+
+  radios1.forEach(r => r.addEventListener("change", actualizarExtra1));
+}
+
+
+/* ===========================
+      ENVÍO DEL FORMULARIO
+=========================== */
+const rsvpForm  = document.getElementById("rsvp-form");
+const rsvpModal = document.getElementById("rsvpModal");
+const rsvpClose = document.getElementById("rsvpClose");
+
+if (rsvpForm) {
+  rsvpForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(rsvpForm);
+
+    fetch(rsvpForm.action, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors",
+    })
+      .then(() => {
+        rsvpForm.reset();
+        if (rsvpModal) {
+          rsvpModal.style.display = "flex";
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Hubo un problema al enviar tu respuesta. Intentá de nuevo.");
+      });
+  });
+}
+
+if (rsvpModal && rsvpClose) {
+  rsvpClose.addEventListener("click", () => {
+    rsvpModal.style.display = "none";
+  });
+
+  rsvpModal.addEventListener("click", (e) => {
+    if (e.target === rsvpModal) {
+      rsvpModal.style.display = "none";
+    }
+  });
+}
+
+/* ===========================
+   ANIMACIONES (INSTAGRAM)
+=========================== */
+const icono = document.getElementById("iconoInstagram");
+
+let pos = 0;
+let dir = 1;
+
+if (icono) {
+  setInterval(() => {
+    pos += dir * 0.3;
+
+    if (pos > 6 || pos < 0) dir *= -1;
+
+    icono.style.transform = `
+      translateY(${-pos}px)
+      rotate(${pos / 3}deg)
+    `;
+  }, 30);
+}
+
+
+/* ===========================
+   ANIMACIONES (AGENDA)
+=========================== */
+const agendaIcon = document.getElementById("agendaIcon");
+
+let t = 0;
+
+if (agendaIcon) {
+  setInterval(() => {
+    t += 0.04;
+
+    agendaIcon.style.transform = `
+      translateY(${Math.sin(t) * 4}px)
+      scale(${1 + Math.sin(t) * 0.02})
+    `;
+  }, 30);
+}
+
+// Selecciona TODOS los carruseles
+const carousels = document.querySelectorAll(".carousel");
+
+carousels.forEach(carousel => {
+  const slides = carousel.querySelector(".slides"); // slides individuales
+
+  // Observer para cada carrusel
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      slides.classList.add("start");   // activa la animación
+      observer.disconnect();           // solo una vez
+    }
+  }, { threshold: 0.3 });
+
+  observer.observe(carousel);
+});
+
+   </script>
+<!-- ===== FOOTER SIMPLE: LOGO + ICONOS (sin texto) ===== -->
+<footer class="footer-brand">
+  <div class="footer-brand-contenido">
+    <img src="Pixelarte Logotipo.png" alt="Logo" class="footer-logo">
+
+    <div class="footer-iconos">
+      <a href="https://www.instagram.com/pixelartechivilcoy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="footer-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="https://api.whatsapp.com/send?phone=542345478614&text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20invitaciones%20digitales" target="_blank" class="footer-icon">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

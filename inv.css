@@ -1,0 +1,2137 @@
+/* ========= RESET ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========= BASE ========= */
+body {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  background-color: #F7EFEF;   /* champagne claro */
+  color:  #6A6666;              /* gris humo elegante */
+}
+
+/* Imagen de portada */
+/* HERO: full-bleed background como al principio */
+.hero {
+  width: 100%;
+  min-height: 75vh;                 /* altura protagonista */
+  background-image: url("foto17.jpg");
+  background-size: contain;         /* ✅ CLAVE */
+  background-repeat: no-repeat;
+  background-position: center top;  /* prioriza la parte superior */
+  background-color: #F7EFEF;        /* rosa champagne */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+/* título encima, igual que antes */
+.hero-title {
+  position: absolute;
+  left: 50%;
+  top: 38%;                       /* ajustá 35% / 40% si querés más arriba/abajo */
+  transform: translate(-50%, -50%);
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(34px, 6vw, 56px);
+  color: #fff;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  z-index: 2;
+  margin: 0;
+}
+
+/* Mobile tweak */
+@media (max-width: 720px) {
+  .hero { min-height: 60vh; background-position: center 25%; }
+  .hero-title { top: 30%; font-size: clamp(24px, 8vw, 36px); }
+}
+
+
+/* ========= BOTÓN MÚSICA ========= */
+/* ===== BOTÓN MÚSICA ROSA NUDE ===== */
+
+.music-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  background: rgba(232, 183, 196, 0.80); /* rosa nude con transparencia */
+  border: 2px solid #C27A8C;             /* rosa viejo contraste */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color:  #6A6666;                        /* gris humo para el ícono */
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.music-btn:hover {
+  background: rgba(232, 183, 196, 1);    /* rosa nude sólido */
+  transform: scale(1.08);
+}
+
+.music-btn:hover {
+  background: rgba(0, 0, 0, 0.35);
+  transform: scale(1.07);
+}
+
+/* ========= CUENTA REGRESIVA MITI-MITI ========= */
+.countdown-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: -60px;
+  padding: 0 16px 60px;
+  z-index: 10;
+}
+
+.countdown-floating {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.countdown-floating .time-box {
+  background: #E8B7C4;     /* rosa nude principal */
+  border-radius: 5px;
+  padding: 18px 26px;
+  min-width: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+}
+
+.countdown-floating .time-number {
+  font-size: 2.4rem;
+  line-height: 1;
+  color:  #6A6666;         /* gris humo */
+  font-weight: 600;
+}
+
+.countdown-floating .time-label {
+  margin-top: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #C27A8C;         /* rosa viejo */
+  text-transform: uppercase;
+}
+
+/* ========= FRASE CON FONDO ========= */
+
+.phrase-section {
+  background-color:#E8B7C4;  /* rosa nude */
+  padding: 50px 16px;
+  color:#7A7777;
+}
+
+.phrase-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.phrase-line {
+  height: 2px;
+  width: 60%;
+  margin: 0 auto 18px;
+  background: #C27A8C;  /* rosa viejo */
+}
+
+.phrase-inner p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+}
+
+/* ========= SECCIÓN FECHA / CALENDARIO ========= */
+
+.date-section {
+  padding: 80px 16px 50px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.cal-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  border: 2px solid #C27A8C; /* rosa viejo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #C27A8C;
+  opacity: 0.9;
+
+  transform-origin: bottom left;
+  animation: calendar-pop 0.6s ease-out 0.2s both;
+}
+
+.cal-bars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.cal-bars span {
+  width: 10px;
+  height: 4px;
+  border-radius: 999px;
+  background-color: #C27A8C;
+}
+
+@keyframes calendar-pop {
+  0% {
+    transform: translateY(10px) rotate(-8deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-2px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.date-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  color: #C27A8C;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.date-subtitle {
+  margin-top: 6px;
+  font-size: 1rem;
+  color:  #6A6666;
+  letter-spacing: 2px;
+}
+
+/* ========= CARRUSEL ========= */
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.slides {
+  display: flex;
+  gap: 12px;
+  animation: slide 24s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+.slides.start {
+  animation-play-state: running; /* 👉 Se activa al hacer scroll */
+}
+
+.slides img {
+  flex: 0 0 calc(33.333% - 8px);
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+@keyframes slide {
+  0%, 15% { transform: translateX(0); }
+  20%, 35% { transform: translateX(calc(-33.333% - 12px)); }
+  40%, 55% { transform: translateX(calc(-66.666% - 24px)); }
+  60%, 75% { transform: translateX(calc(-100% - 36px)); }
+  80%, 95% { transform: translateX(calc(-133.333% - 48px)); }
+}
+/* ============================
+   SECCIÓN LUGAR - ¿DÓNDE?
+   Nude moderno
+============================ */
+
+.place-section {
+  margin-top: 40px;
+}
+
+/* Franja superior rosa con fecha/hora */
+.place-strip {
+  background-color: #C27A8C;        /* rosa viejo */
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.place-strip-text {
+  color: #F7EFEF;                   /* champagne clarito */
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Bloque blanco con el contenido principal */
+.place-body {
+  background-color: #E8B7C4;        /* blanco apenas rosado */
+  padding: 70px 16px 80px;
+  text-align: center;
+}
+
+/* Iconito de ubicación dibujado con CSS */
+.place-pin {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50% 50% 0;
+  border: 2px solid #C27A8C;
+  margin: 0 auto 24px;
+  position: relative;
+
+  transform-origin: 50% 70%;          /* punto de giro del pin */
+  animation: pin-swing 1.6s ease-in-out infinite;
+}
+
+@keyframes pin-swing {
+  0%, 100% {
+    transform: rotate(-45deg) translateX(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateX(8px);  /* se mueve a la derecha */
+  }
+}
+
+.place-pin::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 2px solid #C27A8C;
+}
+
+/* Títulos y textos */
+/* Títulos y textos unificados ¿CUÁNDO? / ¿DÓNDE? */
+.place-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C27A8C;      /* mismo gris que la fecha */
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.place-name {
+  margin-top: 6px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color:  #6A6666;
+}
+
+
+/* Botón "CÓMO LLEGAR" */
+.place-button {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 10px 30px;
+
+  border-radius: 999px;
+  border: 1px solid #C27A8C;
+  background-color: transparent;
+
+  color: #C27A8C;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.place-button:hover {
+  background-color: #C27A8C;
+  color: #F7EFEF;
+}
+/* =========================
+   MODAL DEL MAPA
+========================= */
+
+.map-modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.map-content {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color:  #6A6666;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.map-close:hover {
+  color: #C27A8C; /* tu nude moderno */
+}
+/* === MAPA CON INFORMACIÓN A LA DERECHA === */
+
+.map-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 450px;
+}
+
+.map-left {
+  width: 100%;
+  height: 100%;
+}
+
+.map-right {
+  background: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:  #6A6666;
+}
+
+.map-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.map-address {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.map-button {
+  padding: 10px 15px;
+  background: #C27A8C; /* Tu rosa nude */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.map-button:hover {
+  background: #a46476;
+}
+/* === CORRECCIÓN DE BORDES BLANCOS EN EL CARRUSEL === */
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Evita espacios extra entre slides */
+.carousel-inner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Elimina líneas blancas por centrado o gap */
+.carousel {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.carousel-item img {
+  height: 380px; /* o la altura que quieras */
+  object-fit: cover;
+}
+/* =============================
+   SECCIÓN DRESS CODE — MISMA ESTÉTICA
+============================= */
+
+.dress-section {
+  background-color: #F7EFEF; /* rosa nude como la frase */
+  padding: 70px 16px;
+  text-align: center;
+  color:  #6A6666;
+}
+
+.dress-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === ICONO DIAMANTE DRESS CODE === */
+.dress-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+}
+
+.dress-svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #C27A8C;          /* rosa viejo, podés cambiar a blanco si el fondo es oscuro */
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+
+  transform-origin: 50% 50%;
+  animation: diamond-wiggle 2.2s ease-in-out infinite;
+}
+
+/* movimiento suave del diamante */
+@keyframes diamond-wiggle {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(3deg) translateY(-4px);
+  }
+}
+/* === DESTELLOS ALREDEDOR DEL DIAMANTE === */
+
+/* === DESTELLOS TIPO ESTRELLA === */
+
+.dress-icon {
+  position: relative;
+}
+
+/* “Estrella” de brillo */
+.sparkle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  animation: sparkle-star 2s infinite ease-out;
+}
+
+/* cruz: línea vertical + horizontal */
+.sparkle::before,
+.sparkle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #FFFFFF;         /* brillo blanco */
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+}
+
+/* línea vertical */
+.sparkle::before {
+  width: 3px;
+  height: 18px;
+}
+
+/* línea horizontal */
+.sparkle::after {
+  width: 18px;
+  height: 3px;
+}
+
+/* posiciones de cada destello */
+.sparkle.s1 { top: -8px; left: 50%; transform: translateX(-50%); }
+.sparkle.s2 { top: 15%; right: -10px; }
+.sparkle.s3 { bottom: 15%; left: -10px; }
+.sparkle.s4 { bottom: -10px; left: 55%; }
+
+/* animación de aparición/desaparición + leve giro */
+@keyframes sparkle-star {
+  0%, 100% {
+    transform: scale(0.2) rotate(0deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1) rotate(18deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.8) rotate(8deg);
+    opacity: 0.6;
+  }
+}
+
+/* Títulos y textos */
+.dress-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C27A8C;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.dress-subtitle {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color:  #6A6666;
+  margin-bottom: 20px;
+}
+
+.dress-line {
+  width: 60%;
+  height: 2px;
+  margin: 0 auto 20px;
+  background-color: #C27A8C;
+}
+
+.dress-text {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color:  #6A6666;
+}
+
+.dress-text span {
+  color: #C27A8C;
+  font-weight: 600;
+}
+/* === CARRUSEL: ANIMACIÓN SOLO AL LLEGAR SCROLLEANDO === */
+
+/* estado inicial: escondido y abajo */
+.carousel {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+/* cuando se vuelve visible (clase agregada por JS) */
+.carousel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* === ANIMACIÓN GENERAL DE APARICIÓN DESDE ABAJO === */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* === FRASE FINAL CON ESTILO SUAVE Y FONDO CHAMPAGNE === */
+
+.phrase-section-2 {
+  background-color: #F7EFEF;     /* rosa champagne */
+  padding: 50px 16px;
+  color: #C27A8C;                /* rosa oscuro (rosa viejo) */
+  text-align: center;
+}
+
+.phrase-inner-2 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.phrase-line-2 {
+  height: 2px;
+  width: 60%;
+  margin: 0 auto 18px;
+  background: #C27A8C;           /* línea rosa oscuro */
+}
+
+.phrase-section-2 p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+}
+/* ==========================
+   SECCIÓN REGALO
+========================== */
+
+/* ==========================
+   SECCIÓN REGALO
+========================== */
+
+.gift-section {
+  background-color: #E8B7C4;       /* mismo fondo que ¿DÓNDE? */
+  padding: 70px 16px 80px;
+  text-align: center;
+}
+
+.gift-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ICONO DE REGALO LINEAL PREMIUM */
+.gift-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+}
+
+.gift-svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #C27A8C;                 /* mismo rosa viejo que ¿DÓNDE? */
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* caja un poco más marcada */
+.gift-box {
+  stroke-width: 2.2;
+}
+
+/* grupo tapa + moño: se abre */
+.gift-lid-group {
+  transform-origin: 50% 40%;
+  transform-box: fill-box;
+  animation: gift-open 2.2s ease-in-out infinite;
+}
+
+/* cintas y moño */
+.gift-ribbon-vert,
+.gift-ribbon-hor,
+.gift-bow {
+  stroke-width: 2;
+}
+
+/* animación de apertura suave */
+@keyframes gift-open {
+  0%, 20%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  40% {
+    transform: rotate(-12deg) translateY(-4px);
+  }
+  60% {
+    transform: rotate(5deg) translateY(-2px);
+  }
+}
+
+/* textos y botón al estilo ¿DÓNDE? */
+.gift-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C27A8C;                  /* rosa viejo */
+  margin-bottom: 18px;
+}
+
+.gift-text {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 auto 26px;
+  color:  #6A6666;                  /* gris humo */
+}
+
+.gift-button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 999px;
+  border: 1px solid #C27A8C;
+  background-color: transparent;
+  color: #C27A8C;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.gift-button:hover {
+  background-color: #C27A8C;
+  color: #F7EFEF;
+}
+/* === FRASE FINAL EXTRA === */
+
+.phrase-section-3 {
+  background-color: #F7EFEF;     /* champagne */
+  padding: 50px 16px;
+  color: #C27A8C;                /* rosa viejo */
+  text-align: center;
+}
+
+.phrase-inner-3 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.phrase-line-3 {
+  height: 2px;
+  width: 60%;
+  margin: 0 auto 18px;
+  background: #C27A8C;
+}
+
+.phrase-section-3 p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+}
+/* ==========================
+   SECCIÓN FOTOS (misma estética que REGALO)
+========================== */
+
+.photos-section {
+  background-color: #E8B7C4;   /* fondo igual a REGALO */
+  padding: 70px 16px 80px;
+  text-align: center;
+}
+
+.photos-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Ícono cámara sección FOTOS */
+.photos-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 28px;
+}
+
+/* cámara base: un poco inclinada y flotando */
+.photos-svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #C27A8C;          /* rosa viejo */
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+
+  transform-origin: 50% 55%;
+  animation: camera-idle 2.4s ease-in-out infinite;
+}
+
+/* movimiento suave de “idle” */
+@keyframes camera-idle {
+  0%, 100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+/* piezas individuales: que respondan al clic */
+.camera-body,
+.camera-top,
+.camera-button,
+.camera-flash,
+.camera-lens,
+.lens-outer,
+.lens-inner {
+  transition: all 0.22s ease;
+}
+
+/* centro de zoom del lente */
+.camera-lens {
+  transform-origin: 50% 60%;
+}
+
+/* flash apagado normalmente */
+.camera-flash {
+  opacity: 0;
+}
+
+/* ESTADO DE DISPARO: se activa con .shot desde JS */
+.photos-svg.shot {
+  animation: camera-shot 0.32s ease-out;
+}
+
+.photos-svg.shot .camera-lens {
+  transform: scale(1.18);           /* zoom fuerte del lente */
+}
+
+.photos-svg.shot .camera-button {
+  transform: translateY(2px);       /* botón baja */
+}
+
+.photos-svg.shot .camera-flash {
+  animation: flash-ping 0.28s ease-out;
+}
+
+/* pequeño golpe hacia un costado cuando hace clic */
+@keyframes camera-shot {
+  0% {
+    transform: translateX(0) rotate(-3deg);
+  }
+  40% {
+    transform: translateX(7px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-3deg);
+  }
+}
+
+/* destello del flash */
+@keyframes flash-ping {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Título igual al de REGALO */
+
+
+/* Título igual al de REGALO */
+.photos-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C27A8C;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+/* Texto igual al gift-text */
+.photos-text {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: #6A6666;            /* gris humo */
+  max-width: 540px;
+  margin: 0 auto 26px;
+}
+
+/* Botón igual al de REGALO */
+.photos-button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 999px;
+  border: 1px solid #C27A8C;
+  background-color: transparent;
+  color: #C27A8C;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.photos-button:hover {
+  background-color: #C27A8C;
+  color: #F7EFEF;
+}
+/* ==========================
+   SECCIÓN PLAYLIST SPOTIFY
+========================== */
+
+.spotify-section {
+  background-color: #F7EFEF;      /* champagne como frase 3 */
+  padding: 70px 16px 80px;
+  text-align: center;
+  color: #6A6666;
+}
+
+.spotify-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* icono música */
+.spotify-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+}
+
+.spotify-svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #C27A8C;           /* rosa viejo */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transform-origin: 50% 50%;
+  animation: spotify-wiggle 2.2s ease-in-out infinite;
+}
+
+/* pequeño movimiento tipo dress code */
+@keyframes spotify-wiggle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(3deg);
+  }
+}
+
+.spotify-note,
+.spotify-circle,
+.spotify-bars rect {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* leve rebote al pasar el mouse */
+.spotify-icon:hover .spotify-note {
+  transform: translateY(-2px);
+}
+.spotify-icon:hover .spotify-bars rect:nth-child(1) {
+  transform: scaleY(1.2);
+}
+.spotify-icon:hover .spotify-bars rect:nth-child(2) {
+  transform: scaleY(0.9);
+}
+.spotify-icon:hover .spotify-bars rect:nth-child(3) {
+  transform: scaleY(1.1);
+}
+.spotify-icon:hover .spotify-bars rect:nth-child(4) {
+  transform: scaleY(0.95);
+}
+
+/* textos */
+.spotify-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C27A8C;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.spotify-text {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 auto 24px;
+  color: #6A6666;
+}
+
+.spotify-text span {
+  color: #C27A8C;
+  font-weight: 600;
+}
+
+/* botón igual estilo regalo/fotos */
+.spotify-button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 999px;
+  border: 1px solid #C27A8C;
+  background-color: transparent;
+  color: #C27A8C;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.spotify-button:hover {
+  background-color: #C27A8C;
+  color: #F7EFEF;
+}
+
+/* embed de Spotify */
+.spotify-embed {
+  margin-top: 24px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.spotify-embed iframe {
+  width: 100%;
+  height: 352px;   /* altura estándar de embed */
+  border: 0;
+}
+/* ==========================================================
+      ICONO SPOTIFY — VERSIÓN REALISTA PREMIUM FINAL
+   ========================================================== */
+
+.spotify-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+
+/* halo suave detrás del ícono */
+.spotify-icon::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(194, 122, 140, 0.28) 0%,
+    rgba(194, 122, 140, 0) 60%
+  );
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* ícono principal */
+.spotify-svg {
+  width: 100%;
+  height: 100%;
+  stroke: none;
+  fill: #C27A8C;  /* rosa viejo */
+  transform-origin: center;
+  animation: spotifyFloat 2.4s ease-in-out infinite;
+  opacity: .95;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.20));
+  transition: transform .25s ease, filter .25s ease, opacity .25s ease;
+}
+
+/* flotado suave */
+@keyframes spotifyFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* hover premium */
+.spotify-icon:hover::before {
+  opacity: 1;
+}
+
+.spotify-icon:hover .spotify-svg {
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,0.25));
+  opacity: 1;
+}
+.spotify-icon.pulse::before {
+  opacity: 1 !important;
+  transform: scale(1.25);
+  filter: blur(14px);
+  transition: all .4s ease;
+}
+/* === FRASE FINAL CON ESTÉTICA DE LA FRASE INICIAL === */
+
+.phrase-section-initial-style {
+  background-color: #E8B7C4;   /* mismo rosa nude de la frase inicial */
+  padding: 50px 16px;
+  color: #7A7777;              /* gris humo como el texto inicial */
+  text-align: center;
+}
+
+.phrase-inner-initial-style {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.phrase-line-initial-style {
+  height: 2px;
+  width: 60%;
+  margin: 0 auto 18px;
+  background: #C27A8C;         /* rosa viejo igual que la primera línea */
+}
+
+.phrase-section-initial-style p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+}
+/* ==========================
+   SECCIÓN CONFIRMÁ TU ASISTENCIA
+========================== */
+
+.rsvp-section {
+  background-color: #F7EFEF; /* champagne como varias secciones */
+  padding: 70px 16px 80px;
+  color: #6A6666;            /* gris humo */
+}
+
+.rsvp-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Icono sobre con tilde */
+.rsvp-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+}
+
+.rsvp-svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #C27A8C;           /* rosa viejo */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50% 50%;
+  animation: rsvpFloat 2.2s ease-in-out infinite;
+}
+
+.rsvp-check {
+  stroke-width: 2.4;
+}
+
+@keyframes rsvpFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* Títulos */
+.rsvp-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C27A8C;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.rsvp-deadline {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7A7777;
+  margin-bottom: 26px;
+}
+
+/* Formulario general */
+.rsvp-form {
+  text-align: left;
+}
+
+/* fila número de personas */
+.rsvp-row {
+  margin-bottom: 24px;
+  max-width: 460px;     /* mismo ancho que la tarjeta */
+  margin-left: auto;
+  margin-right: auto;   /* centrado */
+}
+
+.rsvp-row label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: #6A6666;
+}
+
+.rsvp-row select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(194, 122, 140, 0.35);
+  background: rgba(232, 183, 196, 0.55);
+  color: #6A6666;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+/* Tarjeta de cada invitado */
+.rsvp-card {
+  background: rgba(232, 183, 196, 0.65); /* <-- COMO EL MODELO */
+  border-radius: 22px;
+  padding: 28px 26px;
+  max-width: 460px;
+  margin: 0 auto 30px;
+  box-shadow: 0px 12px 32px rgba(0,0,0,0.12);
+  backdrop-filter: blur(6px); /* le da ese efecto de suavidad */
+}
+
+
+.rsvp-card-title {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6A6666;
+  margin-bottom: 16px;
+}
+
+/* grupos de campos */
+.rsvp-field-group {
+  margin-bottom: 16px;
+}
+
+.rsvp-field-group label,
+.rsvp-label {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  color: #6A6666;
+}
+
+/* inputs, selects, textarea dentro de la tarjeta */
+.rsvp-card input[type="text"],
+.rsvp-card input[type="email"],
+.rsvp-card select,
+.rsvp-card textarea {
+  width: 100%;
+  padding: 8px 4px;
+  border: none;
+  border-bottom: 1px solid rgba(106,102,102,0.45);
+  background: transparent;
+  color: #6A6666;              /* gris bien visible */
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.rsvp-card textarea {
+  resize: vertical;
+}
+
+/* placeholder gris suave */
+.rsvp-card input::placeholder,
+.rsvp-card textarea::placeholder {
+  color: rgba(106,102,102,0.55);
+}
+
+/* opciones de radio */
+.rsvp-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rsvp-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #6A6666;
+}
+
+.rsvp-option input[type="radio"] {
+  accent-color: #C27A8C;  /* círculo en rosa viejo */
+}
+
+/* botón confirmar */
+.rsvp-submit {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 999px;
+  border: none;
+  background-color: #FFFFFF;
+  color: #C27A8C;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+    margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.rsvp-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.22);
+  background-color: #C27A8C;
+  color: #F7EFEF;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .rsvp-card {
+    padding: 20px 14px 22px;
+  }
+}
+/* Select dentro de la tarjeta (alimentación) */
+.rsvp-card select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(194, 122, 140, 0.45);
+  background: rgba(247, 239, 239, 0.75);   /* fondo clarito con opacidad */
+  color: #6A6666;
+  font-size: 0.9rem;
+  outline: none;
+}
+.rsvp-card label,
+.rsvp-card input,
+.rsvp-card textarea,
+.rsvp-card select,
+.rsvp-option {
+  color: #6A6666 !important;
+  font-size: 1rem;
+}
+/* Modal de éxito del formulario */
+.rsvp-success-box {
+  max-width: 420px;
+  text-align: center;
+}
+
+.rsvp-success-title {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C27A8C;
+  margin-bottom: 10px;
+}
+
+.rsvp-success-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #6A6666;
+}
+/* Forzar comportamiento fijo en viewport y priorizar visual */
+.music-btn {
+  position: fixed !important;   /* fuerza que sea fixed */
+  bottom: 25px;
+  right: 25px;
+  z-index: 99999;               /* sobre todo lo demás */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* limpiar hover duplicado: deja sólo esta versión */
+.music-btn:hover {
+  background: rgba(232, 183, 196, 1);
+  transform: scale(1.07);
+}
+/* ====== Hero title encima de la imagen principal ====== */
+.hero-image {
+  position: relative; /* necesario para posicionar el título encima */
+  overflow: hidden;
+}
+
+/* Título elegante sobre la imagen */
+.hero-title {
+  position: absolute;
+  top: 55%;                /* ajustar según la composición de la foto */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 6px 14px;
+  font-family: 'Great Vibes', cursive; /* si no cargás la fuente, usa serif por defecto */
+  font-size: 56px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Responsivo: ajustar tamaño en pantallas chicas */
+@media (max-width: 900px) {
+  .hero-title { font-size: 36px; top: 22%; }
+}
+@media (max-width: 420px) {
+  .hero-title { font-size: 26px; top: 24%; padding: 4px 8px; white-space: normal; }
+}
+.frase-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.frase-link:hover {
+  text-decoration: underline;
+}
+.icono-instagram {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.icono-instagram svg {
+  width: 38px;
+  height: 38px;
+  fill: none;
+  stroke: #C27A8C;
+  stroke-width: 1.5;
+  opacity: 0.7;
+}
+.agenda-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.agenda-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: #C27A8C;
+  stroke-width: 1.5;
+  opacity: 0.7;
+}
+/* ===== Final section: foto + corazón + texto ===== */
+.final-section {
+  background: #F7EFEF; /* champagne (ya usado en tu CSS) */
+  padding: 60px 16px 90px;
+  text-align: center;
+  color: #6A6666;
+}
+
+.final-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Foto centrada */
+.final-photo {
+  width: 620px;
+  height: 900px; /* vertical */
+  border-radius: 18px; /* suave, elegante */
+  background-image: url("foto13.jpg"); /* tu foto */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  border: 6px solid rgba(247,239,239,0.9); /* champagne */
+}
+
+
+/* ligero zoom on hover (desktop) */
+.final-photo:hover {
+  transform: scale(1.03);
+}
+
+/* Heart wrapper y SVG */
+.heart-wrap {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.heart-svg {
+  width: 52px;
+  height: 52px;
+  fill: #F2D7DB;            /* rosa muy clarito (llenado) */
+  stroke: #C27A8C;          /* rosa viejo para borde sutil */
+  stroke-width: 0.6;
+  filter: drop-shadow(0 6px 14px rgba(194,122,140,0.08));
+  transform-origin: 50% 50%;
+  animation: heartBeat 1.6s ease-in-out infinite;
+  opacity: 0.95;
+}
+
+.final-teespero {
+  margin: 8px 0 0;
+  font-size: 0.95rem;     /* mismo tamaño que el resto */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8a6a73;
+}
+
+
+/* Nombre cursiva (misma fuente Great Vibes que ya tenés) */
+.final-name {
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+  font-size: 46px;
+  color: rgba(194,122,140,0.95); /* rosa viejo suavizado */
+  letter-spacing: 1px;
+  margin-top: -6px;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Heart beat keyframes */
+@keyframes heartBeat {
+  0%   { transform: scale(1); }
+  10%  { transform: scale(1.12); }
+  25%  { transform: scale(1); }
+  40%  { transform: scale(1.08); }
+  60%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsivo: ajustar tamaños */
+@media (max-width: 900px) {
+  .final-photo { width: 180px; height: 250px; }
+  .heart-svg { width: 46px; height: 46px; }
+  .final-name { font-size: 36px; }
+}
+
+@media (max-width: 420px) {
+  .final-photo { width: 140px; height: 200px; }
+  .heart-svg { width: 36px; height: 36px; }
+  .final-name { font-size: 28px; }
+  .final-section { padding: 34px 14px 50px; }
+}
+.footer {
+  background: rgba(194,122,140,0.95);
+  padding: 25px 0;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 35px;
+  margin-bottom: 15px;
+}
+
+.footer-icons img {
+  height: 22px;
+  margin: 0 10px;
+  opacity: .85;
+}
+.footer-brand {
+  background-color: #d4a6ad; /* rosa champagne */
+  padding: 40px 20px;
+}
+
+.footer-brand-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-logo {
+  height: 48px;
+}
+
+/* contenedor iconos */
+.footer-iconos {
+  display: flex;
+  gap: 15px;
+}
+
+/* iconos circulares */
+.footer-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #e9c7cc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a5c64;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.footer-icon:hover {
+  transform: translateY(-3px);
+  background-color: #f2d6da;
+}
+.footer-content {
+  display: flex;
+  align-items: center;      /* ✅ MISMA ALTURA */
+  justify-content: center;  /* ✅ TODO CENTRADO */
+  gap: 24px;                /* espacio prolijo entre logo e íconos */
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo {
+  position: relative;
+  top: 2px; /* probá 2px o 3px */
+}
+/* =====================
+  Responsive global helpers
+   - container, fluid typography, touch targets
+   - pega esto al final de inv.css
+   ===================== */
+
+/* --- Container / layout --- */
+:root{
+  --max-width: 1100px;
+  --page-padding: 20px;
+  --rose-1: #f7efef;
+  --rose-2: #e6b8bf;
+  --accent: #c27a8c;
+}
+
+/* make main wrapper centered and padded */
+.site-wrapper,
+.main,
+.container {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+  box-sizing: border-box;
+}
+
+/* --- Fluid typography: headings & base --- */
+html { font-size: 16px; }
+body { font-size: 1rem; line-height: 1.45; }
+
+/* Headings scale responsively */
+h1, .hero-title {
+  font-size: clamp(2.1rem, 3.6vw, 4rem); /* grande en desktop, proporcional en móvil */
+  line-height: 1.02;
+}
+
+h2, .section-title {
+  font-size: clamp(1.0rem, 2.2vw, 1.6rem);
+}
+
+/* Paragraphs */
+p { font-size: clamp(0.95rem, 1.6vw, 1.05rem); }
+
+/* --- Responsive images / background helpers --- */
+/* If using <img> */
+img { max-width: 100%; height: auto; display: block; }
+
+/* For div backgrounds - keep control */
+.responsive-bg {
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+}
+
+/* --- Hero adjustments --- */
+.hero-image {
+  height: clamp(45vh, 60vh, 78vh);
+  min-height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* If hero uses a background image */
+.hero-image.responsive-bg {
+  background-size: 108%;
+  background-position: center 15%;
+}
+
+/* If hero uses an <img> inside */
+.hero-image img.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* --- Card / form responsive (el contenedor rosado del formulario) --- */
+.form-card, .invite-card, .photos-inner, .spotify-inner {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: clamp(18px, 2.4vw, 28px);
+}
+
+/* small screens: card becomes full width with smaller padding */
+@media (max-width: 720px) {
+  .form-card, .invite-card, .photos-inner, .spotify-inner {
+    width: calc(100% - 24px);
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  }
+}
+
+/* --- Grid for info-blocks (3 columns -> 1 col on mobile) --- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .info-grid { grid-template-columns: repeat(2, 1fr); gap:18px; }
+}
+@media (max-width: 560px) {
+  .info-grid { grid-template-columns: 1fr; gap:14px; }
+}
+
+/* --- Counters (días/hours) --- */
+.countdown {
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  margin-top: 18px;
+}
+.countdown .tile {
+  flex: 0 0 auto;
+  width: clamp(86px, 18vw, 140px);
+  height: auto;
+  min-height: 86px;
+  padding: 18px 8px;
+  box-sizing: border-box;
+}
+
+/* --- Footer responsiveness --- */
+.site-footer {
+  padding: 22px var(--page-padding);
+}
+.site-footer .site-footer-inner {
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:center;
+}
+/* On desktop keep logo centered and icons right using grid */
+@media (min-width: 721px) {
+  .site-footer .site-footer-inner {
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items:center;
+  }
+  .footer-left { }
+  .footer-logo { justify-self:center; grid-column:2; }
+  .footer-icons { grid-column:3; justify-self:end; display:flex; gap:12px; }
+}
+/* On mobile stack them */
+@media (max-width:720px) {
+  .site-footer .site-footer-inner {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+  .footer-logo img { height:36px; }
+  .footer-icons { justify-content:center; }
+}
+
+/* --- Music floating button: responsive positioning --- */
+.music-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 120;
+  width: 64px;
+  height: 64px;
+}
+@media (max-width:480px){
+  .music-btn { right: 14px; bottom: 14px; width:56px; height:56px; }
+}
+
+/* ensure the floating play button doesn't cover footer content on very small screens */
+@media (max-width:420px){
+  .site-footer { padding-bottom: 70px; } /* leave space for the floating button */
+}
+
+/* --- Final photo responsive (imagen o background) --- */
+.foto-final, .final-photo {
+  margin: 30px auto 12px;
+  display:flex;
+  justify-content:center;
+}
+.foto-final img,
+.final-photo {
+  width: clamp(300px, 46vw, 560px);
+  max-width: 92%;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* If you use a div with background, ensure height behaves on mobile */
+@media (max-width:560px){
+  .final-photo { width: clamp(240px, 72vw, 360px); padding-bottom: 140%; background-size: cover; }
+}
+
+/* --- Typography & spacing tweaks for small screens --- */
+@media (max-width:420px) {
+  .hero-title { font-size: clamp(1.6rem, 6.5vw, 2.2rem); margin-bottom: 28px; }
+  .photos-text, .spotify-text, .final-teespero { font-size: 0.95rem; }
+  .photos-button, .spotify-button { padding: 10px 14px; font-size: 0.95rem; }
+  .form-card input, .form-card select, .form-card textarea { font-size: 1rem; padding: 12px; }
+}
+
+/* --- Accessibility: touch target minimum --- */
+.footer-icon, .photos-button, .spotify-button, .contact-item, .footer-icon {
+  min-height: 44px;
+  min-width: 44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* --- small helpers to avoid overflow --- */
+img, svg { max-width: 100%; height: auto; }
+
+/* --- if you have any input rows that were floated side-by-side, stack them on mobile --- */
+.row-inline {
+  display:flex;
+  gap:14px;
+}
+@media (max-width:720px){
+  .row-inline { flex-direction:column; }
+}
+
+/* --- optional: smooth entrance on small screens, avoid heavy animations --- */
+@media (max-width:720px){
+  * { transition-duration: 180ms; } /* make interactions snappier */
+}
+
+/* Done: responsive base. Ajusta valores puntuales si querés más grande/pequeño */
+@media (max-width: 768px) {
+  .hero {
+    height: 90vh;
+    background-position: center 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 95vh;
+    background-position: center 30%;
+  }
+}
+/* ---------- Mejora estética hero: fade + suavizado ---------- */
+
+/* 1) Aseguramos el fondo champagne del hero igual que el resto */
+.hero {
+  background-color: #F7EFEF; /* rosa champagne (ajustá si usás otro) */
+  position: relative;        /* necesario para pseudo-elementos */
+  overflow: visible;
+}
+
+/* 2) Foto: radio y sombra más suave */
+.hero .hero-img {
+  border-radius: 12px; /* suaviza el borde */
+  box-shadow: 0 30px 60px rgba(0,0,0,0.10); /* sombra más suave y amplia */
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+/* micro hover (opcional en desktop) */
+@media (hover: hover) {
+  .hero .hero-img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.12);
+  }
+}
+
+/* 3) Degradado/fade que funde la parte baja de la imagen con el fondo */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px; /* alto del degradado: ajustá si querés más/menos fusión */
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(247,239,239,0) 0%,
+    rgba(247,239,239,0.55) 40%,
+    rgba(247,239,239,1) 100%
+  );
+  z-index: 1;
+}
+
+/* 4) Elevamos un poco los tiles del contador y hacemos la sombra coherente */
+.countdown {
+  position: relative;
+  z-index: 3; /* por encima del fade */
+  margin-top: -36px; /* los superpone levemente sobre la imagen (ajustá) */
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+
+.countdown .tile {
+  box-shadow: 0 18px 40px rgba(0,0,0,0.09); /* sombra más suave, misma familia visual */
+  border-radius: 8px;
+}
+
+/* 5) Línea tenue separadora y espaciado para “suavizar” la franja rosa debajo */
+.section-divider {
+  height: 1px;
+  background: rgba(196,140,150,0.18);
+  margin: 22px auto;
+  max-width: 520px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 6) En móviles reducimos la altura del fade para que no tape demasiado */
+@media (max-width:720px) {
+  .hero::after { height: 90px; background: linear-gradient(to bottom, rgba(247,239,239,0) 0%, rgba(247,239,239,0.6) 50%, rgba(247,239,239,1) 100%); }
+  .countdown { margin-top: -18px; }
+}
+/* ---------- Carrusel: todas las imágenes mismo tamaño ---------- */
+
+.carousel {
+  overflow: hidden;
+}
+
+/* contenedor de cada imagen */
+.carousel-item {
+  flex: 0 0 auto;
+  width: 260px;        /* ancho fijo */
+  height: 360px;       /* alto fijo */
+  border-radius: 12px;
+  overflow: hidden;    /* CLAVE para que no sobresalga la imagen */
+  background-color: #f0d5da; /* rosa champagne para carga */
+}
+
+/* imagen dentro del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* recorta sin deformar */
+  object-position: center;
+  display: block;
+}
+@media (max-width: 480px) {
+  .carousel-item {
+    width: 170px;
+    height: 240px;
+  }
+}
+@media (max-width: 1024px) {
+  .slides img { height: 360px; flex: 0 0 calc(50% - 8px); }
+}
+@media (max-width: 600px) {
+  .slides img { height: 220px; flex: 0 0 calc(100% - 8px); }
+}
+/* === SECCIÓN AGENDAR FECHA (nuevo estilo) === */
+
+.agenda-section {
+  background-color: #F7EFEF; /* champagne */
+  padding: 40px 16px 25px;
+  text-align: center;
+  color: #6A6666;
+  padding-bottom: 20px;
+}
+
+.agenda-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Icono */
+.agenda-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+}
+
+.agenda-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #C27A8C; /* rosa viejo */
+  opacity: 0.9;
+}
+
+/* Títulos */
+.agenda-title {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C27A8C;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.agenda-text {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6A6666;
+  margin-bottom: 26px;
+}
+
+/* Botón */
+.agenda-button {
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 999px;
+
+  border: 1px solid #C27A8C;
+  background-color: transparent;
+
+  color: #C27A8C;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.agenda-button:hover {
+  background-color: #C27A8C;
+  color: #F7EFEF;
+}
