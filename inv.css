@@ -2289,4 +2289,38 @@ img, svg { max-width: 100%; height: auto; }
     0%, 100% { transform: translateX(0); }
   }
 }
+/* --- CORRECCIÓN CARRUSELES EN CELULAR --- */
+@media (max-width: 768px) {
+
+  .carousel,
+  .playlist-carousel,
+  .instagram-carousel {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track,
+  .playlist-track,
+  .instagram-track {
+    display: flex;
+    width: 100%;
+  }
+
+  .carousel-item,
+  .playlist-item,
+  .instagram-item {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .carousel-item img,
+  .playlist-item img,
+  .instagram-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+}
+
 
