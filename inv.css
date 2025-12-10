@@ -20,32 +20,33 @@ body {
 /* HERO: full-bleed background como al principio */
 .hero {
   width: 100%;
-  min-height: 75vh;                 /* altura protagonista */
+  min-height: 75vh;
   background-image: url("foto17.jpg");
-  background-size: contain;         /* ✅ CLAVE */
+  background-size: contain;          /* TU DISEÑO ORIGINAL */
   background-repeat: no-repeat;
-  background-position: center top;  /* prioriza la parte superior */
-  background-color: #F7EFEF;        /* rosa champagne */
+  background-position: center top;   /* igual que vos */
+  background-color: #F7EFEF;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: visible;
 }
-
 
 /* título encima, igual que antes */
 .hero-title {
   position: absolute;
   left: 50%;
-  top: 38%;                       /* ajustá 35% / 40% si querés más arriba/abajo */
-  transform: translate(-50%, -50%);
+  top: 58%;                 /* <--- EL AJUSTE CLAVE PARA NO TAPAR LA CARA */
+  transform: translateX(-50%);
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(34px, 6vw, 56px);
-  color: #fff;
-  text-shadow: 0 6px 20px rgba(0,0,0,0.45);
-  z-index: 2;
-  margin: 0;
+  color: white;
+  font-size: clamp(40px, 7vw, 70px);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+  z-index: 3;
 }
+
 
 /* Mobile tweak */
 @media (max-width: 720px) {
@@ -2155,10 +2156,36 @@ img, svg { max-width: 100%; height: auto; }
     object-fit: cover !important;
   }
 }
-@media (max-width: 600px) {
-  .carrusel-fotos-2 img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
+/* ===============================
+   RESPONSIVE PARA EL HERO
+   =============================== */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 65vh;
+    background-size: cover;          /* <--- EVITA QUE LA CARA SE RECORTE EN MOVIL */
+    background-position: center 15%;  /* mueve la imagen para mostrar la cara */
+  }
+
+  .hero-title {
+    top: 38%;                        /* baja el texto y deja libre la cara */
+    font-size: clamp(28px, 8vw, 46px);
+    white-space: normal;
+    max-width: 90%;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center 20%;
+  }
+
+  .hero-title {
+    top: 32%;                        /* no tapa nada */
+    font-size: clamp(24px, 10vw, 38px);
   }
 }
