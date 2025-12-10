@@ -2260,3 +2260,33 @@ img, svg { max-width: 100%; height: auto; }
     }
 }
 
+/* ============================================
+   FIX COMPLETO DE RESPONSIVE PARA EL CARRUSEL
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* que el carrusel nunca desborde */
+  .carousel {
+    overflow: hidden;
+  }
+
+  /* fila de imágenes en columna: una por slide */
+  .slides {
+    gap: 8px;
+  }
+
+  .slides img {
+    flex: 0 0 100% !important;   /* ya no 33% */
+    height: auto !important;     /* nunca fija */
+    max-height: 320px;           /* opcional */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* desactiva la animación horizontal porque rompe en mobile */
+  @keyframes slide {
+    0%, 100% { transform: translateX(0); }
+  }
+}
+
