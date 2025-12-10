@@ -2189,3 +2189,74 @@ img, svg { max-width: 100%; height: auto; }
     font-size: clamp(24px, 10vw, 38px);
   }
 }
+/* --- MOBILE FIXES --- */
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero h1 {
+        font-size: 2.2rem;      /* más chico */
+        top: 60%;               /* baja el título */
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+    }
+
+    .hero {
+        height: 90vh;           /* evita que la foto quede rara */
+    }
+
+    /* CONTADOR */
+    .countdown-container {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .countdown-box {
+        width: 80%;             /* no se desborda */
+        padding: 15px;
+    }
+
+    .countdown-number {
+        font-size: 2.2rem;
+    }
+
+    .countdown-label {
+        font-size: 1rem;
+    }
+
+    /* CARRUSELES */
+    .carousel-inner img,
+    .carousel-item img {
+        width: 100%;
+        height: 300px;         /* altura fija razonable */
+        object-fit: cover;     /* Solución al corte */
+    }
+
+    /* TEXTO DE SECCIONES */
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    /* CARDS DEL EVENTO */
+    .event-card img {
+        height: 220px;         /* evita estirar */
+        object-fit: cover;
+    }
+
+    /* MAPA */
+    .map-modal-content {
+        width: 90%;
+        height: 60vh;
+    }
+
+    /* RSVP */
+    form input, 
+    form textarea {
+        font-size: 1rem;
+    }
+}
+
