@@ -2322,5 +2322,12 @@ img, svg { max-width: 100%; height: auto; }
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .spotify-embed iframe {
+    width: 100% !important;
+    height: 380px !important;
+  }
+}
+
 
 
