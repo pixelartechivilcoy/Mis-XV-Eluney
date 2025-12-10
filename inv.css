@@ -2135,3 +2135,30 @@ img, svg { max-width: 100%; height: auto; }
   background-color: #C27A8C;
   color: #F7EFEF;
 }
+@media (max-width: 600px) {
+  .hero-text {
+    top: -30px !important;   /* baja el texto */
+    font-size: 1.6rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .countdown-item {
+    width: 90px !important;
+    height: 90px !important;
+    margin: 8px !important;
+  }
+}
+@media (max-width: 600px) {
+  .carrusel-fotos img {
+    width: 150px !important;
+    height: 200px !important;
+    object-fit: cover !important;
+  }
+}
+@media (max-width: 600px) {
+  .carrusel-fotos-2 img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+}
