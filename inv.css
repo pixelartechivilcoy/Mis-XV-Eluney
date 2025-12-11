@@ -507,7 +507,8 @@ body {
   background: none;
 }
 .carousel-item img {
-  height: 380px; /* o la altura que quieras */
+  height: auto; /* o la altura que quieras */
+  max-height: 90vh;
   object-fit: cover;
 }
 /* =============================
@@ -2161,7 +2162,7 @@ img, svg { max-width: 100%; height: auto; }
 @media (max-width: 600px) {
   .carrusel-fotos img {
     width: 150px !important;
-    height: 200px !important;
+    height: auto !important;
     object-fit: cover !important;
   }
 }
@@ -2400,6 +2401,54 @@ img, svg { max-width: 100%; height: auto; }
     font-size: 1.6rem;
   }
 }
+/* Carrusel: imágenes responsive */
+.slides img {
+  width: 100%;
+  flex: 0 0 80vw;   /* cada foto ocupa el 80% del ancho de pantalla */
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* En pantallas más grandes */
+@media (min-width: 768px) {
+  .slides img {
+    flex: 0 0 calc(33.333% - 12px);
+    height: 400px;
+  }
+}
+.slides img {
+  object-position: top;
+}
+/* CUENTA REGRESIVA RESPONSIVA */
+@media (max-width: 600px) {
+  .countdown-floating {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .countdown-floating .time-box {
+    min-width: calc(50% - 12px); /* 2 columnas en móvil */
+    padding: 12px 0;
+  }
+
+  .time-number {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 600px) {
+  .countdown-floating {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .countdown-floating .time-box {
+    min-width: 22vw;
+    padding: 10px 0;
+  }
+}
+
 
 
 
