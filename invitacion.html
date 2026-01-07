@@ -914,6 +914,46 @@ carousels.forEach(carousel => {
   observer.observe(carousel);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const personasSelect = document.getElementById("rsvp-personas");
+  const guestsContainer = document.getElementById("rsvp-guests");
+
+  if (!personasSelect || !guestsContainer) return;
+
+  personasSelect.addEventListener("change", () => {
+    const cantidad = Number(personasSelect.value);
+    guestsContainer.innerHTML = "";
+
+    for (let i = 2; i <= cantidad; i++) {
+      guestsContainer.insertAdjacentHTML("beforeend", `
+        <div class="rsvp-field-group rsvp-guest-row">
+          <p class="rsvp-card-title">Invitado ${i}</p>
+
+          <label>Nombre *</label>
+          <input type="text" name="nombre_${i}" required>
+
+          <label>Apellido *</label>
+          <input type="text" name="apellido_${i}" required>
+        </div>
+
+        <div class="rsvp-extra">
+          <label>Sumá un mensaje bonito</label>
+          <textarea name="mensaje_${i}" rows="3"></textarea>
+
+          <label>¿Algún requerimiento en la alimentación?</label>
+          <select name="alimentacion_${i}">
+            <option value="ninguno">Ninguno</option>
+            <option value="vegetariano">Vegetariano</option>
+            <option value="vegano">Vegano</option>
+            <option value="celiaco">Celíaco/a</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+      `);
+    }
+  });
+});
+
    </script>
 <!-- ===== FOOTER SIMPLE: LOGO + ICONOS (sin texto) ===== -->
 <footer class="footer-brand">
@@ -936,4 +976,5 @@ carousels.forEach(carousel => {
 
 </body>
 </html>
+
 
