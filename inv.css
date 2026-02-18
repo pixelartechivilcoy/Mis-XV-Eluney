@@ -30,7 +30,7 @@ body {
 .hero {
   width: 100%;
   min-height: 75vh;
-  background-image: url("foto17.jpg");
+  background-image: url("PRIMERA.jpg");
   background-size: contain;          /* TU DISEÑO ORIGINAL */
   background-repeat: no-repeat;
   background-position: center top;   /* igual que vos */
@@ -2448,6 +2448,7 @@ img, svg { max-width: 100%; height: auto; }
     padding: 10px 0;
   }
 }
+
 
 
 
