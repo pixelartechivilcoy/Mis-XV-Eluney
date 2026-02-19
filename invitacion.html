@@ -820,45 +820,23 @@ if (extra1 && radios1.length) {
 /* ===========================
       ENVÍO DEL FORMULARIO
 =========================== */
+
 const rsvpForm  = document.getElementById("rsvp-form");
 const rsvpModal = document.getElementById("rsvpModal");
-const rsvpClose = document.getElementById("rsvpClose");
 
 if (rsvpForm) {
   rsvpForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    let invitados = [];
+    const formData = new FormData(rsvpForm);
 
-    document.querySelectorAll('#personasContainer .campo').forEach(bloque => {
-      const nombre = bloque.querySelector('input[placeholder="Nombre"]')?.value || "";
-      const apellido = bloque.querySelector('input[placeholder="Apellido"]')?.value || "";
-      const comida = bloque.querySelector('select')?.value || "";
-
-      if (nombre || apellido) {
-        invitados.push(
-          `${nombre} ${apellido}${comida ? " (" + comida + ")" : ""}`
-        );
-      }
-    });
-
-    const data = {
-      asistencia: document.querySelector('input[name="asistencia"]:checked')?.value || "",
-      invitados: invitados.join(" / "),
-      mensaje: document.querySelector('textarea')?.value || ""
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycbxus8_wtjACHJAe3Asz3dX_mUaEZIWVt9otAZxcWJQXuyAZMbd4ZVmk_htMG8gc4HCe/exec", {
+    fetch(rsvpForm.action, {
       method: "POST",
-      mode: "no-cors",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
+      body: formData
     })
     .then(() => {
-      rsvpForm.style.display = "none";
-      mensajeGracias.classList.remove("oculto");
+      rsvpModal.style.display = "flex";
+      rsvpForm.reset();
     })
     .catch(() => {
       alert("Error al enviar el formulario");
@@ -983,4 +961,3 @@ document.querySelectorAll(".carousel-container").forEach(container => {
 
 </body>
 </html>
-
